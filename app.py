@@ -337,9 +337,8 @@ def test_ai_upload():
     return jsonify({"error": "Error"}), 500
 
 if __name__ == '__main__':
-
     # Lấy PORT từ biến môi trường của Render, nếu không có thì dùng 5000 (để chạy local vẫn được)
     port = int(os.environ.get("PORT", 5000))
-    
     # Quan trọng: host phải là '0.0.0.0'
     app.run(host='0.0.0.0', port=port)
+
